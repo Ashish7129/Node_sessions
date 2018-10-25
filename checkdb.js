@@ -22,4 +22,19 @@ async function task(){
     await db.authenticate()
 }
 
-task()
+
+async function writeTasks(){
+    const task = await Task.create({
+        name :'this is a first task',
+        priority : 3
+    })
+    
+}
+
+async function doAll()
+{
+    await task();
+    await writeTasks();
+}
+
+doAll()
